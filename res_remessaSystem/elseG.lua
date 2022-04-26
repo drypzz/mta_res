@@ -25,8 +25,7 @@ config = {
             [2] = {
                 pos = {-2424.2353515625, -607.65118408203, 131.5625};
                 acl = 'Admin';
-                client = {rgb = {255, 255, 255};
-                text = 'Administração'};
+                client = {rgb = {255, 255, 255}; text = 'Administração'};
                 command = 'createitem'; 
                 value = 0;
                 blip = false;
