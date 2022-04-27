@@ -29,3 +29,12 @@ rgbToHex = function(red, green, blue, alpha)
 		return string.format('#%.2X%.2X%.2X', red, green, blue)
 	end
 end;
+
+removeHex = function(s)
+    if type (s) == "string" then
+        while (s ~= s:gsub ("#%x%x%x%x%x%x", "")) do
+            s = s:gsub ("#%x%x%x%x%x%x", "")
+        end
+    end
+    return s or false
+end

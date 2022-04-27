@@ -40,6 +40,8 @@ for i, v in ipairs(config.settings.geral) do
                         tables.usage[player] = true
                         takePlayerMoney(player, tonumber(v.value))
                         setElementPosition(marker, v.pos[1], v.pos[2], v.pos[3] - 999)
+                        setPedAnimation(player, 'CASINO', 'cards_loop', -1, true, false, false, _, _)
+                        toggleAllControls(player, false)
                         tables.timer[player] = setTimer(function()
                             outputChatBox('* Peça construida com sucesso.', player, 255, 255, 0)
                             setElementPosition(marker, v.pos[1], v.pos[2], v.pos[3])
@@ -47,6 +49,8 @@ for i, v in ipairs(config.settings.geral) do
                             if (isTimer(tables.timer[player])) then
                                 killTimer(tables.timer[player])
                             end
+                            setPedAnimation(player)
+                            toggleAllControls(player, true)
                         end, 5000, 1)
                     else
                         outputChatBox('* Você não possui $'..formatNumber(tonumber(v.value), '.'), player, 255, 0, 0, true)
