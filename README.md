@@ -22,7 +22,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 📎 Qual o propósito do resource?
 
-- O propósito do resource é fazer com que os `players` de Fac's trabalhem para ter suas armas e não de "mão beixada(giria)"
+- O propósito do resource é fazer com que os `players` de Fac's trabalhem para ter suas armas e não de "mão beijada(giria)"
 
 - Ou até mesmo os `players` "comum" terem como um "emprego" de contrabando trabalhando para os `players` de Fac's
 
