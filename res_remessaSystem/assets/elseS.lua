@@ -26,7 +26,7 @@ local tables = {
 --> markers
 
 for i, v in ipairs( config[ 'settings' ][ 'geral' ][ 'markers' ] ) do
-    local marker = createMarker( Vector3( unpack( v.pos ) ), 'cylinder', 1.5, v.client.rgb[ 1 ], v.client.rgb[ 2 ], v.client.rgb[ 3 ], 50)
+    local marker = createMarker( Vector3( unpack( v.pos ) ), 'cylinder', 1.2, v.client.rgb[ 1 ], v.client.rgb[ 2 ], v.client.rgb[ 3 ], 50)
     local blip = ( v.blip == true and createBlipAttachedTo( marker, v.icon ) or cancelEvent( ) )
     if ( v.blip == true ) then
         setBlipVisibleDistance( marker, 100 )
