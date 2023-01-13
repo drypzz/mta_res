@@ -11,7 +11,7 @@
 
 config = {
     ['settings'] = {
-        ['geral'] = {acl = 'Gang'; --> Permissão geral(de quem podera pegar as peças);
+        ['geral'] = {acl = 'Gang'; --> Permissão geral(de quem podera pegar as armas);
             ['pecas'] = {cmd = 'setgang'; acl = 'Console'}; --> Comando para setar as peças e a permissão de quem podera setar;
             ['info'] = {cmd = 'pecasgang'}; --> Comando para ver quantas peças de arma restam;
             ['block'] = {cmd = 'blockgang'; acl = 'Console'}; --> Comando para bloquear as peças e a permissão de quem podera bloquear;
