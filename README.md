@@ -51,7 +51,7 @@ config = {
 ```lua
 config = {
     ['settings'] = {
-        ['geral'] = {acl = 'string'; --> Permissão geral(de quem podera pegar as armas);
+        ['geral'] = {acl = 'string'; timer = 5; --> Permissão geral(de quem podera pegar as armas) -|- Tempo(Em minutos) para poder pegar as armas novamente
         
             ['pecas'] = {cmd = 'string'; acl = 'string'}; --> Comando para setar as peças -|- Permissão de quem podera setar;
             ['info'] = {cmd = 'string'}; --> Comando para ver quantas peças de arma restam;
