@@ -48,11 +48,11 @@ addCommandHandler(config[ 'settings' ][ 'geral' ].cmd,
                     if ( tables.usage[ player ] ) then
                         return outputChatBox('* System: Aguarde, você ja esta construindo uma peça.', player, 255, 0, 0, true)
                     end
-                    if ( (tonumber( getElementData( player, 'item:peca' ) ) or 0) >= config[ 'settings' ][ 'geral' ]['pecas'].max ) then
+                    if ( ( tonumber( getElementData( player, 'item:peca' ) ) or 0 ) >= ( tonumber( config[ 'settings' ][ 'geral' ][ 'pecas' ].max ) or 2 ) ) then
                         return outputChatBox( '* System: Você ja possui o máximo de peças', player, 255, 0, 0, true )
                     end
                     if ( getPlayerMoney( player ) >= tonumber( data.value ) ) then
-                        outputChatBox('* System: Aguarde ('..(config[ 'settings' ][ 'geral' ]['pecas'].timer)..' min) para terminar de construir uma peça.', player, 255, 255, 255, true)
+                        outputChatBox('* System: Aguarde ('..( tonumber( config[ 'settings' ][ 'geral' ][ 'pecas' ].timer ) or 1 )..' min) para terminar de construir uma peça.', player, 255, 255, 255, true)
                         tables.usage[ player ] = true
                         takePlayerMoney( player, tonumber( data.value ) )
                         setElementPosition( data.k, data.pos[ 1 ], data.pos[ 2 ], data.pos[ 3 ] - 999 )
@@ -63,14 +63,14 @@ addCommandHandler(config[ 'settings' ][ 'geral' ].cmd,
                             setPedAnimation( player )
                             toggleAllControls( player, true )
                             tables.usage[ player ] = false
-                            setElementData( player, 'item:peca', ( tonumber(getElementData( player, 'item:peca' )) or 0 ) + 1 )
+                            setElementData( player, 'item:peca', ( tonumber( getElementData( player, 'item:peca' ) ) or 0 ) + 1 )
                             outputChatBox( '* System: Peça criada com sucesso.', player, 53, 153, 204, true )
                             if ( isTimer( tables.timer[ player ] ) ) then
                                 killTimer( tables.timer[ player ] )
                             end
-                        end, (config[ 'settings' ][ 'geral' ][ 'pecas' ].timer * 60000), 1)
+                        end, ( ( tonumber( config[ 'settings' ][ 'geral' ][ 'pecas' ].timer ) or 1 ) * 60000), 1)
                     else
-                        outputChatBox( '* System: Você não possui $'..formatNumber( tonumber(v.value ), '.' ), player, 255, 0, 0, true )
+                        outputChatBox( '* System: Você não possui $'..formatNumber( tonumber( v.value ), '.' ), player, 255, 0, 0, true )
                     end
                 else
                     outputChatBox( '* System: Você não tem permissão de utilizar o comando neste local.', player, 255, 0, 0, true )
