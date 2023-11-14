@@ -184,7 +184,7 @@ addCommandHandler(config[ 'settings' ][ 'geral' ][ 'info' ].cmd,
     function( player )
         if ( getPlayerAcl( player, config[ 'settings' ][ 'geral' ].acl ) ) then
             local get = tonumber( tables.amount[ pickup ] ) or 0
-            outputChatBox( '* System: Atualmente a #3399cc[ '..( formatNumber( get, '.' ) )..' ]#ffffff peças de armas', player, 255, 255, 255, true )
+            outputChatBox( '* System: Atualmente há #3399cc[ '..( formatNumber( get, '.' ) )..' ]#ffffff peças de armas', player, 255, 255, 255, true )
         else
             outputChatBox( '* System: Você não tem permissão de utilizar este comando.', player, 255, 0, 0, true )
         end
