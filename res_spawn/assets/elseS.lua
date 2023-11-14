@@ -171,7 +171,7 @@ addCommandHandler(config[ 'settings' ][ 'geral' ][ 'pecas' ].cmd,
                 outputChatBox( '* System: Utilize /'..( cmd )..' <value>', player, 255, 0, 0, true )
             end
         else
-            outputChatBox( '* System: Você não tem permissão de utilizar este comando.', hitElement, 255, 0, 0, true )
+            outputChatBox( '* System: Você não tem permissão de utilizar este comando.', player, 255, 0, 0, true )
         end
     end
 );
@@ -229,7 +229,7 @@ addCommandHandler(config[ 'settings' ][ 'geral' ][ 'block' ].cmd,
                 outputChatBox( '* System: Utilize /'..( cmd )..' <tempo(Em minutos)>', player, 255, 0, 0, true)
             end
         else
-            outputChatBox( '* System: Você não tem permissão de utilizar este comando.', hitElement, 255, 0, 0, true )
+            outputChatBox( '* System: Você não tem permissão de utilizar este comando.', player, 255, 0, 0, true )
         end
     end
 );
