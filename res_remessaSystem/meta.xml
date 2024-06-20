@@ -1,10 +1,10 @@
 <meta>
-    <info author = 'elseif' />
+    <info author = 'drypzz' />
 
-    <script src = 'assets/utils/elseU.lua' type = 'shared' cache = 'false' />
+    <script src = 'assets/utils/utils.lua' type = 'shared' cache = 'false' />
 
-    <script src = 'elseG.lua' type = 'shared' cache = 'false' />
+    <script src = 'mainG.lua' type = 'shared' cache = 'false' />
 
-    <script src = 'assets/elseC.lua' type = 'client' cache = 'false' />
-    <script src = 'assets/elseS.lua' type = 'server' cache = 'false' />
+    <script src = 'assets/mainC.lua' type = 'client' cache = 'false' />
+    <script src = 'assets/mainS.lua' type = 'server' cache = 'false' />
 </meta>

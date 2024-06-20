@@ -1,5 +1,5 @@
 <meta>
-    <info author = 'elseif' />
+    <info author = 'drypzz' />
 
-    <script src = 'assets/elseC.lua' type = 'client' cache = 'false' />
+    <script src = 'assets/mainC.lua' type = 'client' cache = 'false' />
 </meta>
